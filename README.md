@@ -22,3 +22,7 @@ La pipeline se déclenche sur un `push` ou une `pull_request` sur la branche `ma
 6. Attendre 5 secondes.
 7. Tester la réponse HTTP
 8. Tester l'endpoint /health
+9. Login to GHCR
+10. Nom du repo en minuscules
+11. Build l'image avec un tag basé sur le commit SHA
+12. Publicatiino de l'image sur Github Container Registry
