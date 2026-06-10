@@ -19,3 +19,6 @@ La pipeline se déclenche sur un `push` ou une `pull_request` sur la branche `ma
    - ex. `nginx -t -c ./nginx.conf`
 4. Build image Docker.
 5. Lance container Docker.
+6. Attendre 5 secondes.
+7. Tester la réponse HTTP
+8. Tester l'endpoint /health

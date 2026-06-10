@@ -40,3 +40,20 @@ jobs:
 
             - name: Run container
               run: docker run -d --name atelier-ci-cd-test -p 8080:80 atelier-ci-cd
+
+            - name: SLEEP 5s
+              run: |
+                sleep 5
+
+            - name: Verify site is up
+              run: |
+                if ! curl -fsS http://localhost:8080 >/dev/null; then
+                  exit 1
+                fi
+                
+            
+            - name: Verify /health endpoint
+              run: |
+                if ! curl -fsS http://localhost:8080/health >/dev/null; then
+                  exit 1
+                fi
